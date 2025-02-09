@@ -104,7 +104,7 @@ lsof -i
 netstat -nr
 
 # ファイアウォール
-nft lisst ruleset ; lsmod | grep nf
+nft list ruleset ; lsmod | grep nf
 firewall-cmd --list-all
 
 # NTP
@@ -162,14 +162,17 @@ uname -n
 #GRUB
 /etc/grubd.d/40-custom
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg # 起動コンフィグに反映
+sudo grubby --info # grubの定義を表示(RHEL9)
 
 # ストレジ
 fdisk -C 
 /etc/fstab
 
-# SELINUX
+# SELINUX (GRUBの項目も参照)
 sudo getenforce
-sed -ie "s/\(SELINUX=\)enforcing/\1disabled/" /etc/selinux/config 
+sudo grubby --update-kernel ALL --args selinux=0 #RHEL9で無効化
+sudo grubby --update-kernel ALL --remove-args selinux #RHEL9で有効化:無効化した場合
+# sed -ie "s/\(SELINUX=\)enforcing/\1disabled/" /etc/selinux/config 
 
 # サブスクリプション
 # RHCPで登録したシステムは4時間ごとにポーリングされる
