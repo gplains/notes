@@ -10,7 +10,9 @@ title:CentOS7でZABBIX5をインストールする(2022/5)
 
   RHEL7クローンの場合：Zabbix 5.0LTSまでで打ち止め(5.4もzabbix-serverとしては使えない)
 
-  RHEL8クローン、Ubuntu18.04以降の場合: Zabbix 6.0LTSも利用可能
+  Debian 11、Ubuntu18.04/20.04の場合: Zabbix 6.0LTS が利用可能
+  
+  RHEL8/9クローン、Debian 12、Ubuntu 22.04以降の場合:  Zabbix 6.0LTS,7.0LTS が利用可能
 
 ## 参考にしたURI
 
