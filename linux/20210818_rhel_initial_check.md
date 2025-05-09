@@ -167,6 +167,7 @@ sudo grubby --info # grubの定義を表示(RHEL9)
 # ストレジ
 fdisk -C 
 /etc/fstab
+lsblk -o +HCTL,SERIAL|grep -v loop
 
 # SELINUX (GRUBの項目も参照)
 sudo getenforce
@@ -178,7 +179,17 @@ sudo grubby --update-kernel ALL --remove-args selinux #RHEL9で有効化:無効�
 # RHCPで登録したシステムは4時間ごとにポーリングされる
 sudo subscription-manager status
 sudo dnf group list 
+
+# ユーザプロファイル:対象ユーザでサインインして行う
+printenv # export -p も表示は違うが同様の挙動
+umask    # umask の表示、デフォルトは0002らしい
+
+# パスワードポリシ
+grep -v "^#" /etc/login.defs  |uniq
+grep -v "^#" /etc/security/pwquality.conf |uniq # 初期値はコメントアウトされている
+
 ```
+
 
 ## Tips
 
