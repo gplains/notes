@@ -19,6 +19,19 @@ title:QCOW2ベースのインストールイメージを使用する
   ```
   sudo apt install libguestfs-tools
   ```
+- パーミッションとかAppArmor に色々筋を通す
+
+  ```
+  sudo chmod 0644 /boot/vmlinuz* # 2025/7/15
+  
+  vi  /etc/apparmor.d/usr/bin/passt  # 2025/7/15
+    owner /tmp/**               w, # 初期設定
+    owner @{HOME}/**            w, # 初期設定
+    /run/user/*/libguestfs**    w, # passt.sock と passt1.pid の書き込み許可
+
+  apparmor_parser -r /etc/apparmor.d/usr.bin.passt
+  ```
+
 - 適当な位置にqcow2イメージを配置する
 - virt-customize を実行しrootパスワードを設定する
 
