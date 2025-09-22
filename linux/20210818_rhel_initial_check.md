@@ -103,8 +103,12 @@ ip a; nmcli con show ; nmcli conshow <NIC> | grep ipv4
 lsof -i 
 netstat -nr
 
+# /etc/sysconfig/network-scripts 配下はRHEL10では廃止
+ls -l /etc/NetworkManager/system-connections/
+ls -l /run/NetworkManager/system-connections/
+
 # ファイアウォール
-nft list ruleset ; lsmod | grep nf
+nft lisst ruleset ; lsmod | grep nf
 firewall-cmd --list-all
 
 # NTP
@@ -128,7 +132,7 @@ lsmod |grep hv
 rpm -qa | sort
 
 # ログ整形
-ls -l /etc/rsyslog.d/+.conf
+ls -l /etc/rsyslog.d/*.conf
 ls -l /etc/logrotate.d/*
 
 # 監査
@@ -145,9 +149,6 @@ ls -l /etc/logrotate.d/*
 #個別のサービス確認
 systemctl is-enabled someservice
 
-#ネットワークファイル
-/etc/sysconfig/network
-/etc/sysconfig/network-scripts/
 
 #システム上限
 /etc/security/limits.conf
@@ -167,13 +168,12 @@ sudo grubby --info # grubの定義を表示(RHEL9)
 # ストレジ
 fdisk -C 
 /etc/fstab
-lsblk -o +HCTL,SERIAL|grep -v loop
 
 # SELINUX (GRUBの項目も参照)
 sudo getenforce
 sudo grubby --update-kernel ALL --args selinux=0 #RHEL9で無効化
 sudo grubby --update-kernel ALL --remove-args selinux #RHEL9で有効化:無効化した場合
-# sed -ie "s/\(SELINUX=\)enforcing/\1disabled/" /etc/selinux/config 
+# sed -ie "s/\(SELINUX=\)enforcing/\1disabled/" /etc/selinux/config
 
 # サブスクリプション
 # RHCPで登録したシステムは4時間ごとにポーリングされる
@@ -189,7 +189,6 @@ grep -v "^#" /etc/login.defs  |uniq
 grep -v "^#" /etc/security/pwquality.conf |uniq # 初期値はコメントアウトされている
 
 ```
-
 
 ## Tips
 
