@@ -26,7 +26,7 @@ exportto="出力先フォルダ"
  
 # Zabbix APIログイン
 header='Content-Type:application/json-rpc'
-apiurl='https://zabbix2.g-plains.net/zabbix/api_jsonrpc.php'
+apiurl='https://zabbixサーバのホスト名/zabbix/api_jsonrpc.php'
 zbxauth="<Frontendで生成したToken>"
  
 # テンプレートグループを取得、ここでは"ORETEMPLATE" "ORETEMPLATE2" の決め打ち
