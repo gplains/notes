@@ -1,0 +1,63 @@
+[root@localhost ~]# uname -a
+Linux localhost.localdomain 6.12.0-211.7.3.el10_2.x86_64 #1 SMP PREEMPT_DYNAMIC Fri May  8 22:40:33 EDT 2026 x86_64 GNU/Linux
+
+[root@localhost ~]# cat /etc/redhat-release 
+Red Hat Enterprise Linux release 10.2 (Coughlan)
+
+[root@localhost ~]# grep -v "^#" /etc/selinux/config 
+
+SELINUX=enforcing
+SELINUXTYPE=targeted
+
+[root@localhost ~]#  grep -v "^#" /etc/login.defs 
+
+MAIL_DIR	/var/spool/mail
+
+UMASK		022
+
+HOME_MODE	0700
+
+PASS_MAX_DAYS	99999
+PASS_MIN_DAYS	0
+PASS_MIN_LEN	8
+PASS_WARN_AGE	7
+
+UID_MIN                  1000
+UID_MAX                 60000
+SYS_UID_MIN               201
+SYS_UID_MAX               999
+SUB_UID_MIN		   524288
+SUB_UID_MAX		600100000
+SUB_UID_COUNT		    65536
+
+GID_MIN                  1000
+GID_MAX                 60000
+SYS_GID_MIN               201
+SYS_GID_MAX               999
+SUB_GID_MIN		   524288
+SUB_GID_MAX		600100000
+SUB_GID_COUNT		    65536
+
+PASS_CHANGE_TRIES	5
+
+PASS_ALWAYS_WARN	yes
+
+ENCRYPT_METHOD YESCRYPT
+
+USERGROUPS_ENAB yes
+
+CREATE_HOME	yes
+
+HMAC_CRYPTO_ALGO SHA512
+
+[root@localhost ~]# grubby --info=ALL | grep arg
+args="ro crashkernel=2G-64G:256M,64G-:512M resume=UUID=79214703-bd36-408d-b738-377d4ad6d755 rd.lvm.lv=rhel/root rd.lvm.lv=rhel/swap"
+args="ro crashkernel=2G-64G:256M,64G-:512M resume=UUID=79214703-bd36-408d-b738-377d4ad6d755 rd.lvm.lv=rhel/root rd.lvm.lv=rhel/swap"
+
+
+[root@localhost ~]# grep -v "^#" /etc/kdump.conf
+
+auto_reset_crashkernel yes
+path /var/crash
+core_collector makedumpfile -l --message-level 7 -d 31
+

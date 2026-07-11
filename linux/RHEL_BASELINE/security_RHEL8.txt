@@ -1,0 +1,51 @@
+[root@localhost ~]# uname -a
+Linux localhost.localdomain 4.18.0-553.el8_10.x86_64 #1 SMP Fri May 10 15:19:13 EDT 2024 x86_64 x86_64 x86_64 GNU/Linux
+
+[root@localhost ~]# cat /etc/redhat-release 
+Red Hat Enterprise Linux release 8.10 (Ootpa)
+
+[root@localhost ~]# grep -v "^#" /etc/selinux/config 
+
+SELINUX=enforcing
+SELINUXTYPE=targeted
+
+[root@localhost ~]# grep -v "^#" /etc/login.defs 
+
+MAIL_DIR	/var/spool/mail
+
+UMASK		022
+
+HOME_MODE	0700
+
+PASS_MAX_DAYS	99999
+PASS_MIN_DAYS	0
+PASS_MIN_LEN	5
+PASS_WARN_AGE	7
+
+UID_MIN                  1000
+UID_MAX                 60000
+SYS_UID_MIN               201
+SYS_UID_MAX               999
+
+GID_MIN                  1000
+GID_MAX                 60000
+SYS_GID_MIN               201
+SYS_GID_MAX               999
+
+CREATE_HOME	yes
+
+USERGROUPS_ENAB yes
+
+ENCRYPT_METHOD SHA512
+
+SHA_CRYPT_MAX_ROUNDS 5000
+
+[root@localhost ~]# grubby --info=ALL | grep arg
+args="ro crashkernel=auto resume=/dev/mapper/rhel-swap rd.lvm.lv=rhel/root rd.lvm.lv=rhel/swap rhgb quiet $tuned_params"
+args="ro crashkernel=auto resume=/dev/mapper/rhel-swap rd.lvm.lv=rhel/root rd.lvm.lv=rhel/swap rhgb quiet"
+
+[root@localhost ~]# grep -v "^#" /etc/kdump.conf
+
+path /var/crash
+core_collector makedumpfile -l --message-level 7 -d 31
+

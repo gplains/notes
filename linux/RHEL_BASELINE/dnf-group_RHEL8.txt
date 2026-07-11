@@ -1,0 +1,120 @@
+[root@localhost ~]# dnf group list 
+Available Environment Groups:
+   Server with GUI
+   Server
+   Workstation
+   Custom Operating System
+   Virtualization Host
+Installed Environment Groups:
+   Minimal Install
+Available Groups:
+   Legacy UNIX Compatibility
+   Development Tools
+   Graphical Administration Tools
+   Security Tools
+   Headless Management
+   RPM Development Tools
+   Smart Card Support
+   Network Servers
+   .NET Core Development
+   Container Management
+   Scientific Support
+   System Tools
+
+[root@localhost ~]# dnf group info "minimal install" 
+Environment Group: Minimal Install
+ Description: Basic functionality.
+ Mandatory Groups:
+   Core
+ Optional Groups:
+   Standard
+
+
+[root@localhost ~]# dnf group info "core" 
+Group: Core
+ Description: Smallest possible installation
+ Mandatory Packages:
+   NetworkManager
+   audit
+   basesystem
+   bash
+   coreutils
+   cronie
+   curl
+   dnf
+   e2fsprogs
+   filesystem
+   firewalld
+   glibc
+   grubby
+   hostname
+   initscripts
+   iproute
+   iprutils
+   iputils
+   irqbalance
+   kbd
+   kexec-tools
+   less
+   man-db
+   ncurses
+   openssh-clients
+   openssh-server
+   parted
+   passwd
+   plymouth
+   policycoreutils
+   procps-ng
+   rootfiles
+   rpm
+   rsyslog
+   selinux-policy-targeted
+   setup
+   shadow-utils
+   sssd-common
+   sssd-kcm
+   subscription-manager
+   sudo
+   systemd
+   tuned
+   util-linux
+   vim-minimal
+   xfsprogs
+   yum
+ Default Packages:
+   NetworkManager-team
+   NetworkManager-tui
+   authselect
+   biosdevname
+   dnf-plugins-core
+   dracut-config-rescue
+   iwl100-firmware
+   iwl1000-firmware
+   iwl105-firmware
+   iwl135-firmware
+   iwl2000-firmware
+   iwl2030-firmware
+   iwl3160-firmware
+   iwl5000-firmware
+   iwl5150-firmware
+   iwl6000-firmware
+   iwl6000g2a-firmware
+   iwl6050-firmware
+   iwl7260-firmware
+   kernel-tools
+   libsysfs
+   linux-firmware
+   lshw
+   lsscsi
+   microcode_ctl
+   prefixdevname
+   rhc
+   sg3_utils
+   sg3_utils-libs
+ Optional Packages:
+   dracut-config-generic
+   dracut-network
+   initial-setup
+   rdma-core
+   selinux-policy-mls
+   tboot

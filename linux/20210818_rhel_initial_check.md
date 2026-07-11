@@ -1,23 +1,23 @@
 ---
-title:RHEL8の初期設定とチェックリスト
+title:RHELの初期設定とチェックリスト
 ---
 
-# RHEL8の初期設定とチェックリスト
+# RHELの初期設定とチェックリスト
 
-あくまで2021年末までのメモ、それ以降は怖くて使えない
+あくまで2026年末までのメモ、それ以降は怖くて使えない
 
 ## インストール
 
 - CDベースのインストール
 
-  rhel-8.3-x86_64-boot.iso を使用したネットワークインストールの場合
+  rhel-8.10-x86_64-boot.iso を使用したネットワークインストールの場合
 
   予めNICを有効化,IPアドレスをDHCP払出か設定する(これやらないと以降ができないみたい)
 
   RHSMに登録したID/パスワード (あるいは、サブスクリプションID/識別名)でサブスクリプションを有効化
 
-  そのあとでリポジトリを設定(CentOS8/8Streamでは参照先フルパスの指定必要)
-  
+  そのあとでリポジトリを設定
+
   仮想マシンの場合、 minimal + 標準 + ゲストエージェント の組み合わせが最低限必要(業務で使う場合)
 
 ### 実際
@@ -54,7 +54,7 @@ title:RHEL8の初期設定とチェックリスト
 
   http://ftp.riken.jp/Linux/centos/8-stream/BaseOS/x86_64/os
 
-  RHEL8 の場合
+  RHEL の場合
 
   ユーザ名、パスワードを指定して Redhat CDN
 
@@ -108,10 +108,11 @@ ls -l /etc/NetworkManager/system-connections/
 ls -l /run/NetworkManager/system-connections/
 
 # ファイアウォール
-nft lisst ruleset ; lsmod | grep nf
+nft list ruleset ; lsmod | grep nf
 firewall-cmd --list-all
 
 # NTP
+grep -v "^#" /etc/chrony.conf  |uniq
 cat /etc/chrony.conf
 systemctl status chronyd.service
 

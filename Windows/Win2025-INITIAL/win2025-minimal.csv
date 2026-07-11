@@ -1,0 +1,269 @@
+﻿### 役割
+Installed,FeatureType,Path
+FALSE,Role,Active Directory Federation Services
+FALSE,Role,Active Directory Rights Management サービス
+FALSE,Role Service,    Active Directory Rights Management サーバー
+FALSE,Role Service,    ID フェデレーション サポート
+FALSE,Role,Active Directory ドメイン サービス
+FALSE,Role,Active Directory ライトウェイト ディレクトリ サービス
+FALSE,Role,Active Directory 証明書サービス
+FALSE,Role Service,    証明機関
+FALSE,Role Service,    オンライン レスポンダー
+FALSE,Role Service,    ネットワーク デバイス登録サービス
+FALSE,Role Service,    証明機関 Web 登録
+FALSE,Role Service,    証明書の登録 Web サービス
+FALSE,Role Service,    証明書の登録ポリシー Web サービス
+FALSE,Role,DHCP サーバー
+FALSE,Role,DNS サーバー
+FALSE,Role,FAX サーバー
+FALSE,Role,Host Guardian サービス
+FALSE,Role,Hyper-V
+FALSE,Role,Web サーバー (IIS)
+FALSE,Role Service,    Web サーバー
+FALSE,Role Service,        HTTP 共通機能
+FALSE,Role Service,            HTTP エラー
+FALSE,Role Service,            ディレクトリの参照
+FALSE,Role Service,            既定のドキュメント
+FALSE,Role Service,            静的なコンテンツ
+FALSE,Role Service,            HTTP リダイレクト
+FALSE,Role Service,            WebDAV 発行
+FALSE,Role Service,        セキュリティ
+FALSE,Role Service,            要求フィルター
+FALSE,Role Service,            IIS クライアント証明書マッピング認証
+FALSE,Role Service,            IP およびドメインの制限
+FALSE,Role Service,            SSL 証明書の集中サポート
+FALSE,Role Service,            URL 承認
+FALSE,Role Service,            Windows 認証
+FALSE,Role Service,            クライアント証明書マッピング認証
+FALSE,Role Service,            ダイジェスト認証
+FALSE,Role Service,            基本認証
+FALSE,Role Service,        パフォーマンス
+FALSE,Role Service,            静的なコンテンツの圧縮
+FALSE,Role Service,            動的なコンテンツの圧縮
+FALSE,Role Service,        状態と診断
+FALSE,Role Service,            HTTP ログ
+FALSE,Role Service,            ODBC ログ
+FALSE,Role Service,            カスタム ログ
+FALSE,Role Service,            トレース
+FALSE,Role Service,            ログ ツール
+FALSE,Role Service,            要求の監視
+FALSE,Role Service,        アプリケーション開発
+FALSE,Role Service,            .NET 拡張機能 3.5
+FALSE,Role Service,            .NET 拡張機能 4.8
+FALSE,Role Service,            Application Initialization
+FALSE,Role Service,            ASP
+FALSE,Role Service,            ASP.NET 3.5
+FALSE,Role Service,            ASP.NET 4.8
+FALSE,Role Service,            CGI
+FALSE,Role Service,            ISAPI フィルター
+FALSE,Role Service,            ISAPI 拡張
+FALSE,Role Service,            WebSocket プロトコル
+FALSE,Role Service,            サーバー側インクルード
+FALSE,Role Service,    FTP サーバー
+FALSE,Role Service,        FTP サービス
+FALSE,Role Service,        FTP 拡張
+FALSE,Role Service,    管理ツール
+FALSE,Role Service,        IIS 管理コンソール
+FALSE,Role Service,        IIS 6 管理互換
+FALSE,Role Service,            IIS 6 メタベース互換
+FALSE,Role Service,            IIS 6 WMI 互換
+FALSE,Role Service,            IIS 6 スクリプト ツール
+FALSE,Role Service,        IIS 管理スクリプトおよびツール
+FALSE,Role Service,        管理サービス
+FALSE,Role,Windows Server Update Services
+FALSE,Role Service,    WID Connectivity
+FALSE,Role Service,    WSUS Services
+FALSE,Role Service,    SQL Server Connectivity
+FALSE,Role,Windows 展開サービス
+FALSE,Role Service,    トランスポート サーバー
+FALSE,Role Service,Windows 展開サービス    展開サーバー
+FALSE,Role,デバイス正常性構成証明
+FALSE,Role,ネットワーク コントローラー
+FALSE,Role,ネットワーク ポリシーとアクセス サービス
+TRUE,Role,ファイル サービスと記憶域サービス
+FALSE,Role Service,    ファイル サービスおよび iSCSI サービス
+FALSE,Role Service,        ファイル サーバー
+FALSE,Role Service,        DFS レプリケーション
+FALSE,Role Service,        DFS 名前空間
+FALSE,Role Service,        iSCSI ターゲット サーバー
+FALSE,Role Service,        iSCSI ターゲット記憶域プロバイダー (VDS および VSS ハードウェア プロバイダー)
+FALSE,Role Service,        NFS サーバー
+FALSE,Role Service,        データ重複除去
+FALSE,Role Service,        ネットワーク ファイル用 BranchCache
+FALSE,Role Service,        ファイル サーバー VSS エージェント サービス
+FALSE,Role Service,        ファイル サーバー リソース マネージャー
+FALSE,Role Service,        ワーク フォルダー
+TRUE,Role Service,    記憶域サービス
+FALSE,Role,ボリューム ライセンス認証サービス
+FALSE,Role,リモート アクセス
+FALSE,Role Service,    DirectAccess および VPN (RAS)
+FALSE,Role Service,    Web アプリケーション プロキシ
+FALSE,Role Service,    ルーティング
+FALSE,Role,リモート デスクトップ サービス
+FALSE,Role Service,    リモート デスクトップ Web アクセス
+FALSE,Role Service,    リモート デスクトップ ゲートウェイ
+FALSE,Role Service,    リモート デスクトップ セッション ホスト
+FALSE,Role Service,    リモート デスクトップ ライセンス
+FALSE,Role Service,    リモート デスクトップ仮想化ホスト
+FALSE,Role Service,    リモート デスクトップ接続ブローカー
+FALSE,Role,印刷とドキュメント サービス
+FALSE,Role Service,    プリント サーバー
+FALSE,Role Service,    LPD サービス
+FALSE,Role Service,    インターネット印刷
+
+### 機能
+Installed,FeatureType,Path
+FALSE,Feature,.NET Framework 3.5 Features
+FALSE,Feature,    .NET Framework 3.5 (.NET 2.0 および 3.0 を含む)
+FALSE,Feature,    HTTP アクティブ化
+FALSE,Feature,    非 HTTP アクティブ化
+TRUE,Feature,.NET Framework 4.8 Features
+TRUE,Feature,    .NET Framework 4.8
+FALSE,Feature,    ASP.NET 4.8
+TRUE,Feature,    WCF サービス
+FALSE,Feature,        HTTP アクティブ化
+FALSE,Feature,        TCP アクティブ化
+TRUE,Feature,        TCP ポート共有
+FALSE,Feature,        メッセージ キュー (MSMQ) アクティブ化
+FALSE,Feature,        名前付きパイプのアクティブ化
+FALSE,Feature,Background Intelligent Transfer Service (BITS)
+FALSE,Feature,    IIS サーバー拡張機能
+FALSE,Feature,    Compact Server
+FALSE,Feature,BitLocker ドライブ暗号化
+FALSE,Feature,BitLocker ネットワーク ロック解除
+FALSE,Feature,BranchCache
+FALSE,Feature,Direct Play
+FALSE,Feature,Fabric Management 用の VM シールド ツール
+FALSE,Feature,Host Guardian Hyper-V サポート
+FALSE,Feature,HTTP プロキシを経由した RPC
+FALSE,Feature,I/O サービス品質
+FALSE,Feature,IIS ホスト可能な Web コア
+FALSE,Feature,IP アドレス管理 (IPAM) サーバー
+FALSE,Feature,Linux 用 Windows サブシステム
+FALSE,Feature,LPR ポート モニター
+FALSE,Feature,Management OData IIS 拡張機能
+TRUE,Feature,Microsoft Defender ウイルス対策
+FALSE,Feature,MultiPoint Connector
+FALSE,Feature,    MultiPoint Connector サービス
+FALSE,Feature,    MultiPoint マネージャーおよび MultiPoint ダッシュ ボード
+FALSE,Feature,NFS クライアント
+FALSE,Feature,RAS 接続マネージャー管理キット (CMAK)
+FALSE,Feature,Remote Differential Compression
+FALSE,Feature,Simple TCP/IP Services
+FALSE,Feature,SMB 1.0/CIFS ファイル共有のサポート
+FALSE,Feature,    SMB 1.0/CIFS クライアント
+FALSE,Feature,    SMB 1.0/CIFS サーバー
+FALSE,Feature,SMB 帯域幅制限
+FALSE,Feature,SNMP サービス
+FALSE,Feature,    WMI SNMP プロバイダー
+FALSE,Feature,Telnet Client
+FALSE,Feature,TFTP Client
+FALSE,Feature,WebDAV リダイレクター
+FALSE,Feature,Windows Identity Foundation 3.5
+FALSE,Feature,Windows Internal Database
+TRUE,Feature,Windows PowerShell
+TRUE,Feature,    Windows PowerShell 5.1
+FALSE,Feature,    Windows PowerShell 2.0 エンジン
+FALSE,Feature,    Windows PowerShell Desired State Configuration Service
+FALSE,Feature,    Windows PowerShell Web Access
+FALSE,Feature,Windows Search サービス
+FALSE,Feature,Windows Server バックアップ
+FALSE,Feature,Windows Server 移行ツール
+FALSE,Feature,Windows TIFF IFilter
+FALSE,Feature,Windows プロセス アクティブ化サービス
+FALSE,Feature,    プロセス モデル
+FALSE,Feature,    .NET 環境 3.5
+FALSE,Feature,    構成 API
+FALSE,Feature,Windows 生体認証フレームワーク
+FALSE,Feature,Windows 標準ベースの記憶域の管理
+FALSE,Feature,WinRM IIS 拡張機能
+FALSE,Feature,WINS サーバー
+TRUE,Feature,Wireless LAN Service
+TRUE,Feature,WoW64 サポート
+TRUE,Feature,XPS Viewer
+FALSE,Feature,インターネット印刷クライアント
+FALSE,Feature,グループ ポリシーの管理
+FALSE,Feature,コンテナー
+FALSE,Feature,システム インサイト
+TRUE,Feature,システム データ アーカイバー
+FALSE,Feature,ストレージ移行サービス
+FALSE,Feature,ストレージ移行サービス プロキシ
+FALSE,Feature,セットアップおよびブート イベント収集
+FALSE,Feature,ソフトウェア ロード バランサー
+TRUE,Feature,Windows Admin Center Setup
+FALSE,Feature,データ センター ブリッジング
+FALSE,Feature,ネットワーク仮想化
+FALSE,Feature,ネットワーク負荷分散
+FALSE,Feature,フェールオーバー クラスタリング
+FALSE,Feature,マルチパス I/O
+FALSE,Feature,メッセージ キュー
+FALSE,Feature,    メッセージ キュー サービス
+FALSE,Feature,        メッセージ キュー サーバー
+FALSE,Feature,        HTTP サポート
+FALSE,Feature,        ディレクトリ サービス統合
+FALSE,Feature,        マルチキャスト サポート
+FALSE,Feature,        メッセージ キュー トリガー
+FALSE,Feature,        ルーティング サービス
+FALSE,Feature,    メッセージ キュー DCOM プロキシ
+FALSE,Feature,メディア ファンデーション
+FALSE,Feature,リモート アシスタンス
+FALSE,Feature,リモート サーバー管理ツール
+FALSE,Feature,    機能管理ツール
+FALSE,Feature,        BitLocker ドライブ暗号化管理ユーティリティ
+FALSE,Feature,            BitLocker ドライブ暗号化ツール
+FALSE,Feature,            BitLocker 回復パスワード ビューアー
+FALSE,Feature,        BITS サーバー拡張ツール
+FALSE,Feature,        DataCenterBridging LLDP ツール
+FALSE,Feature,        IP アドレス管理 (IPAM) クライアント
+FALSE,Feature,        SNMP ツール
+FALSE,Feature,        Windows PowerShell のシステム インサイト モジュール
+FALSE,Feature,        Windows PowerShell 用記憶域レプリカ モジュール
+FALSE,Feature,        WINS サーバー ツール
+FALSE,Feature,        シールドされた VM のツール
+FALSE,Feature,        ストレージ移行サービス ツール
+FALSE,Feature,        ネットワーク負荷分散ツール
+FALSE,Feature,        フェールオーバー クラスタリング ツール
+FALSE,Feature,            Windows PowerShell 用のフェールオーバー クラスター モジュール
+FALSE,Feature,            フェールオーバー クラスター管理ツール
+FALSE,Feature,            フェールオーバー クラスター コマンド インターフェイス
+FALSE,Feature,            フェールオーバー クラスター自動化サーバー
+FALSE,Feature,    役割管理ツール
+FALSE,Feature,        AD DS および AD LDS ツール
+FALSE,Feature,            AD DS ツール
+FALSE,Feature,                Active Directory 管理センター
+FALSE,Feature,                AD DS スナップインおよびコマンドライン ツール
+FALSE,Feature,            AD LDS スナップインおよびコマンドライン ツール
+FALSE,Feature,            Windows PowerShell の Active Directory モジュール
+FALSE,Feature,        Hyper-V 管理ツール
+FALSE,Feature,            Hyper-V GUI 管理ツール
+FALSE,Feature,            Windows PowerShell 用 Hyper-V モジュール
+FALSE,Feature,        Windows Server Update Services ツール
+FALSE,Feature,            API と PowerShell コマンドレット
+FALSE,Feature,            ユーザー インターフェイス管理コンソール
+FALSE,Feature,        リモート デスクトップ サービス ツール
+FALSE,Feature,            リモート デスクトップ ゲートウェイ ツール
+FALSE,Feature,            リモート デスクトップ ライセンス ツール
+FALSE,Feature,            リモート デスクトップ ライセンス診断機能ツール
+FALSE,Feature,        Active Directory Rights Management サービス ツール
+FALSE,Feature,        Active Directory 証明書サービス ツール
+FALSE,Feature,            オンライン レスポンダー ツール
+FALSE,Feature,            証明機関管理ツール
+FALSE,Feature,        DHCP サーバー ツール
+FALSE,Feature,        DNS サーバー ツール
+FALSE,Feature,        FAX サーバー ツール
+FALSE,Feature,        Windows 展開サービス ツール
+FALSE,Feature,        ネットワーク コントローラー管理ツール
+FALSE,Feature,        ネットワーク ポリシーとアクセス サービス ツール
+FALSE,Feature,        ファイル サービス ツール
+FALSE,Feature,            DFS 管理ツール
+FALSE,Feature,            ネットワーク ファイル システム管理ツールのサービス
+FALSE,Feature,            ファイル サーバー リソース マネージャー ツール
+FALSE,Feature,        ボリューム ライセンス認証ツール
+FALSE,Feature,        リモート アクセス管理ツール
+FALSE,Feature,            Windows PowerShell 用のリモート アクセス モジュール
+FALSE,Feature,            リモート アクセス GUI ツールとコマンド ライン ツール
+FALSE,Feature,        印刷とドキュメント サービス ツール
+FALSE,Feature,拡張記憶域
+FALSE,Feature,記憶域レプリカ
+FALSE,Feature,高品質な Windows オーディオ ビデオ エクスペリエンス
+FALSE,Feature,Network ATC

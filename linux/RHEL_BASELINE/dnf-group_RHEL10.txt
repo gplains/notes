@@ -1,0 +1,116 @@
+
+[root@localhost ~]# dnf group list 
+Available Environment Groups:
+   Server with GUI
+   Server
+   Workstation
+   Virtualization Host
+   Custom Operating System
+Installed Environment Groups:
+   Minimal Install
+Available Groups:
+   Container Management
+   RPM Development Tools
+   .NET Development
+   Console Internet Tools
+   Development Tools
+   Legacy UNIX Compatibility
+   Smart Card Support
+   Graphical Administration Tools
+   Scientific Support
+   Security Tools
+   Headless Management
+   System Tools
+   Network Servers
+
+[root@localhost ~]#  dnf group info "minimal install" 
+Environment Group: Minimal Install
+ Description: Basic functionality.
+ Mandatory Groups:
+   Core
+ Optional Groups:
+   Standard
+
+[root@localhost ~]#  dnf group info "core" 
+Group: Core
+ Description: Minimal host installation
+ Mandatory Packages:
+   audit
+   basesystem
+   bash
+   coreutils
+   cronie
+   crypto-policies
+   crypto-policies-scripts
+   curl
+   dnf
+   e2fsprogs
+   filesystem
+   firewalld
+   glibc
+   grubby
+   hostname
+   iproute
+   iproute-tc
+   iputils
+   irqbalance
+   kbd
+   kexec-tools
+   less
+   logrotate
+   man-db
+   ncurses
+   openssh-clients
+   openssh-server
+   p11-kit
+   parted
+   policycoreutils
+   procps-ng
+   rootfiles
+   rpm
+   rpm-plugin-audit
+   rsyslog
+   selinux-policy-targeted
+   setup
+   shadow-utils
+   sssd-common
+   sssd-kcm
+   sudo
+   systemd
+   util-linux
+   vim-minimal
+   xfsprogs
+   yum
+ Default Packages:
+   NetworkManager
+   NetworkManager-tui
+   amd-gpu-firmware
+   authselect
+   dnf-plugins-core
+   dracut-config-rescue
+   initscripts-rename-device
+   insights-client
+   intel-gpu-firmware
+   iwlwifi-dvm-firmware
+   iwlwifi-mvm-firmware
+   kernel-tools
+   libsysfs
+   linux-firmware
+   lshw
+   lsscsi
+   microcode_ctl
+   nvidia-gpu-firmware
+   prefixdevname
+   python3-libselinux
+   rhc
+   sg3_utils
+   sg3_utils-libs
+ Optional Packages:
+   dracut-config-generic
+   dracut-network
+   rdma-core
+   selinux-policy-mls
+   tboot
+ Conditional Packages:
+   subscription-manager
+
