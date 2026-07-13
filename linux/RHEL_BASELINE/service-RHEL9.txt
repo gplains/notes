@@ -1,4 +1,4 @@
-[root@localhost ~]# systemctl list-unit-files --type service --no-pager                  --no-pager\--no-pager\--no-pager--no-pager --no-pager --no-pager --no-pager --no-pager --no-pager --no-pager -no-pager -no-pager 
+[root@localhost ~]# systemctl list-unit-files --no-pager
 UNIT FILE                                  STATE           PRESET
 proc-sys-fs-binfmt_misc.automount          static          -
 -.mount                                    generated       -
